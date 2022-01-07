@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!--<script src="app1.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
+
+</head>
+
+<body>
+  <div id="clickdiv" >hello</div> 
+  <button  onclick="countTracker()">Клик</button> 
+  <script type="text/javascript">
+
+      var clickCount = 0;
+      function countTracker() {
+          clickCount += 1;
+          document.getElementById("clickdiv").innerHTML = "Clicks:" + clickCount;
+          localStorage.setItem("count", clickCount);
+
+      }
+      str_count = localStorage.getItem("count");
+      console.log(str_count);
+    </script>
+
+</body>
+</html>
